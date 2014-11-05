@@ -165,7 +165,7 @@ namespace AsyncPoco
 		/// <remarks>
 		/// Calls to Open/CloseSharedConnection are reference counted and should be balanced
 		/// </remarks>
-		public async Task OpenSharedConnectionAsync()
+		public virtual async Task OpenSharedConnectionAsync()
 		{
 			if (_sharedConnectionDepth == 0)
 			{
