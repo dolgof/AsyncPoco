@@ -24,6 +24,11 @@ namespace AsyncPoco
 	{
 		readonly SemaphoreSlim _connectionSyncLock = new SemaphoreSlim(1);
 
+		/// <summary>
+		/// Construct a Database using a supplied connectionString Name.  The actual connection string and provider will be 
+		/// read from app/web.config.
+		/// </summary>
+		/// <param name="connectionStringName">The name of the connection</param>
 		public ThreadSafeDataBase(string connectionStringName)
 			: base(connectionStringName)
 		{
